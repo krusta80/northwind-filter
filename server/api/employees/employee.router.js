@@ -16,7 +16,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/:letter', function (req, res, next) {
-	Employee.find({firstLetter: req.params.letter})
+	Employee.find({firstLetter: req.params.letter}).sort('name')
 	.then(function (employees) {
 		res.json(employees);
 	})

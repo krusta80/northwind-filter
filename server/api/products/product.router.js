@@ -16,7 +16,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/:letter', function (req, res, next) {
-	Product.find({firstLetter: req.params.letter})
+	Product.find({firstLetter: req.params.letter}).sort('name')
 	.then(function (products) {
 		res.json(products);
 	})

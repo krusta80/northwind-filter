@@ -1,0 +1,11 @@
+<div class="filter-container">
+	{{title}}
+	<div class="buffer local">
+		<button ng-repeat="letter in alphabet" ng-disabled="!activeLetters[letter]" ng-click="getItems({letter:letter})">{{letter}}</button>
+	</div>
+	<div>
+		<ul>
+			<li ng-repeat="item in items">{{item.name}}</li>
+		</ul>
+	</div>
+</div>
