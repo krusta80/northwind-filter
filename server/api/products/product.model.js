@@ -10,8 +10,7 @@ var Product = new mongoose.Schema({
 		required: true
 	},
 	firstLetter: {
-		type: String,
-		//required: true
+		type: String
 	}
 });
 
