@@ -9,7 +9,7 @@ app.use(require('./statics.middleware'));
 
 app.use('/api', require('../api/api.router'));
 
-var validFrontendRoutes = ['/', '/stories', '/users', '/stories/:id', '/users/:id', '/signup', '/login'];
+var validFrontendRoutes = ['/', '/employees', '/products', '/employees/:firstLetter', '/products/:firstLetter'];
 var indexPath = path.join(__dirname, '..', '..', 'public', 'index.html');
 validFrontendRoutes.forEach(function (stateRoute) {
 	app.get(stateRoute, function (req, res) {
